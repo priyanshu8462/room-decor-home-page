@@ -1,0 +1,191 @@
+@import url("https://fonts.googleapis.com/css2?family=Spartan:wght@400;500;600;700;800;900&display=swap");
+
+* {
+  border: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Spartan";
+  z-index: 1;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+.navbar {
+  position: fixed;
+  display: flex;
+  width: 60%;
+  height: 6rem;
+  align-items: center;
+  justify-content: space-around;
+  z-index: 2;
+}
+
+.navbar .logo {
+  width: 25%;
+  padding-left: 7.5%;
+}
+
+.navbar ul {
+  width: 75%;
+}
+.navbar li {
+  list-style-type: none;
+  display: inline-block;
+  margin-right: 20px;
+}
+
+.navbar li a {
+  font-size: 1rem;
+  color: #fff;
+  text-decoration: none;
+}
+
+.slides {
+  width: 100%;
+  min-height: 100vh;
+}
+
+.slide .top {
+  display: flex;
+  flex-direction: row;
+  max-height: 65vh;
+}
+
+.text,
+.bottom-slide {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 5%;
+}
+
+.text .heading {
+  font-size: 2.7rem;
+  font-weight: 700;
+  line-height: 1;
+  margin-bottom: 3%;
+}
+
+.text .para,
+.small-para {
+  font-size: 1rem;
+  color: #777;
+  margin-bottom: 6%;
+  line-height: 1.4;
+}
+
+.text .shop-now {
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 10px;
+  color: #888;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.arrow {
+  position: inherit;
+  background: #000;
+  width: 30%;
+  padding: 6% 7%;
+  cursor: pointer;
+  transform: translate(-47%, 70%);
+  bottom: 0;
+}
+
+.left-arrow {
+  margin-right: 55%;
+}
+
+.slide .bottom {
+  display: flex;
+}
+
+.small-heading {
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  margin-bottom: 3%;
+}
+
+.dark-image,
+.light-image {
+  max-width: 30vw;
+}
+
+.slide {
+  display: none;
+}
+
+.slide.active {
+  display: block;
+}
+
+@media (max-width: 375px) {
+  body {
+    min-height: 100vh;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+  .slides {
+    overflow-x: hidden;
+  }
+  .navbar {
+    width: 100%;
+    height: 4rem;
+  }
+  .navbar .logo {
+    position: absolute;
+    left: 1%;
+    width: 15%;
+  }
+  .navbar ul {
+    position: absolute;
+    width: 75%;
+    right: 0;
+  }
+  .navbar li {
+    margin-right: 5px;
+  }
+  .navbar li a {
+    font-size: 0.7rem;
+  }
+  .slide .top {
+    flex-direction: column;
+    max-height: unset;
+  }
+  .slide .bottom {
+    display: flex;
+    flex-direction: column;
+  }
+  .bottom img {
+    max-width: unset;
+    width: 100%;
+  }
+  .arrow {
+    position: absolute;
+    width: 40%;
+    padding: 4%;
+    cursor: pointer;
+    transform: translate(137%, -503%);
+  }
+
+  .text,
+  .bottom-slide {
+    padding: 10% 5%;
+  }
+  .text .heading {
+    font-size: 1.3rem;
+  }
+
+  .text .para,
+  .small-para {
+    font-size: 0.8rem;
+  }
+}
